@@ -64,6 +64,12 @@ export async function run({
     // to the appID, and the alias argument is ignored if also specified.
     if (appID) {
       core.debug(`Linking ${appID}`)
+      // Unlink first to handle re-runs gracefully (e.g., PR synchronize events)
+      // Ignore errors if the app is not currently linked
+      await exec(cleverCLI, ['unlink', '--alias', appID], {
+        ...execOptions,
+        ignoreReturnCode: true
+      })
       await exec(cleverCLI, ['link', appID, '--alias', appID], execOptions)
       alias = appID
     }
