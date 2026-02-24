@@ -115,7 +115,7 @@ jobs:
         id: docker-labels-tags
         run: |
           echo 'labels<<__LABELS_EOF__' >> $GITHUB_OUTPUT
-          echo "org.opencontainers.image.title=47ng/actions-clever-cloud" >> $GITHUB_OUTPUT
+          echo "org.opencontainers.image.title=beyond-scale-group/actions-clever-cloud" >> $GITHUB_OUTPUT
           echo "org.opencontainers.image.description=GitHub action to deploy to Clever Cloud (PR preview)" >> $GITHUB_OUTPUT
           echo "org.opencontainers.image.version=${{ steps.package.outputs.version }}-pr.${{ github.event.pull_request.number }}" >> $GITHUB_OUTPUT
           echo "org.opencontainers.image.revision=${{ steps.sha.outputs.sha }}" >> $GITHUB_OUTPUT
@@ -125,8 +125,8 @@ jobs:
           echo "org.opencontainers.image.url=https://github.com/${{github.repository}}/actions/runs/${{github.run_id}}" >> $GITHUB_OUTPUT
           echo '__LABELS_EOF__' >> $GITHUB_OUTPUT
           echo 'tags<<__TAGS_EOF__' >> $GITHUB_OUTPUT
-          echo "ghcr.io/47ng/actions-clever-cloud:${{ steps.docker-tag.outputs.tag }}" >> $GITHUB_OUTPUT
-          echo "ghcr.io/47ng/actions-clever-cloud:git-${{ steps.sha.outputs.sha }}" >> $GITHUB_OUTPUT
+          echo "ghcr.io/beyond-scale-group/actions-clever-cloud:${{ steps.docker-tag.outputs.tag }}" >> $GITHUB_OUTPUT
+          echo "ghcr.io/beyond-scale-group/actions-clever-cloud:git-${{ steps.sha.outputs.sha }}" >> $GITHUB_OUTPUT
           echo '__TAGS_EOF__' >> $GITHUB_OUTPUT
 
       - name: Set up QEMU
@@ -178,10 +178,10 @@ jobs:
 
             \`\`\`yaml
             # Use the PR number to follow changes in this PR
-            - uses: docker://ghcr.io/47ng/actions-clever-cloud:${{ steps.docker-tag.outputs.tag }}
+            - uses: docker://ghcr.io/beyond-scale-group/actions-clever-cloud:${{ steps.docker-tag.outputs.tag }}
 
             # Use the git SHA for pinning to a specific commit
-            - uses: docker://ghcr.io/47ng/actions-clever-cloud:git-${{ steps.sha.outputs.sha }}
+            - uses: docker://ghcr.io/beyond-scale-group/actions-clever-cloud:git-${{ steps.sha.outputs.sha }}
             \`\`\`
 
             <details>
