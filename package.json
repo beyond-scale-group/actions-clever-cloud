@@ -1,6 +1,6 @@
 {
   "name": "@47ng/actions-clever-cloud",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "private": true,
   "description": "GitHub Action to deploy to Clever Cloud",
   "license": "MIT",
@@ -35,7 +35,7 @@
   "dependencies": {
     "@actions/core": "^1.11.1",
     "@actions/exec": "^1.1.1",
-    "clever-tools": "^4.1.0"
+    "clever-tools": "^4.6.1"
   },
   "devDependencies": {
     "@types/node": "^24.6.2",

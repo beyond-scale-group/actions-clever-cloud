@@ -119,7 +119,7 @@ jobs:
         id: docker-labels-tags
         run: |
           echo 'labels<<__LABELS_EOF__' >> $GITHUB_OUTPUT
-          echo "org.opencontainers.image.title=47ng/actions-clever-cloud" >> $GITHUB_OUTPUT
+          echo "org.opencontainers.image.title=beyond-scale-group/actions-clever-cloud" >> $GITHUB_OUTPUT
           echo "org.opencontainers.image.description=GitHub action to deploy to Clever Cloud" >> $GITHUB_OUTPUT
           echo "org.opencontainers.image.version=${{ steps.package.outputs.version }}" >> $GITHUB_OUTPUT
           echo "org.opencontainers.image.revision=${{ steps.sha.outputs.sha }}" >> $GITHUB_OUTPUT
@@ -130,13 +130,13 @@ jobs:
           echo '__LABELS_EOF__' >> $GITHUB_OUTPUT
           echo 'tags<<__TAGS_EOF__' >> $GITHUB_OUTPUT
           if [ "${{ github.ref_name }}" == "master" ]; then
-            echo "ghcr.io/47ng/actions-clever-cloud:${{ steps.package.outputs.version }}" >> $GITHUB_OUTPUT
-            echo "47ng/actions-clever-cloud:${{ steps.package.outputs.version }}" >> $GITHUB_OUTPUT
+            echo "ghcr.io/beyond-scale-group/actions-clever-cloud:${{ steps.package.outputs.version }}" >> $GITHUB_OUTPUT
+            echo "beyond-scale-group/actions-clever-cloud:${{ steps.package.outputs.version }}" >> $GITHUB_OUTPUT
           fi
-          echo "ghcr.io/47ng/actions-clever-cloud:${{ steps.docker-tag.outputs.tag }}" >> $GITHUB_OUTPUT
-          echo "ghcr.io/47ng/actions-clever-cloud:git-${{ steps.sha.outputs.sha }}" >> $GITHUB_OUTPUT
-          echo "47ng/actions-clever-cloud:${{ steps.docker-tag.outputs.tag }}" >> $GITHUB_OUTPUT
-          echo "47ng/actions-clever-cloud:git-${{ steps.sha.outputs.sha }}" >> $GITHUB_OUTPUT
+          echo "ghcr.io/beyond-scale-group/actions-clever-cloud:${{ steps.docker-tag.outputs.tag }}" >> $GITHUB_OUTPUT
+          echo "ghcr.io/beyond-scale-group/actions-clever-cloud:git-${{ steps.sha.outputs.sha }}" >> $GITHUB_OUTPUT
+          echo "beyond-scale-group/actions-clever-cloud:${{ steps.docker-tag.outputs.tag }}" >> $GITHUB_OUTPUT
+          echo "beyond-scale-group/actions-clever-cloud:git-${{ steps.sha.outputs.sha }}" >> $GITHUB_OUTPUT
           echo '__TAGS_EOF__' >> $GITHUB_OUTPUT
 
       - name: Set up QEMU
