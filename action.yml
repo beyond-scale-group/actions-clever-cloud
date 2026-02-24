@@ -1,4 +1,4 @@
-name: Deploy to Clever Cloud
+name: BSG Deploy to Clever Cloud
 description: Deploy your application to Clever Cloud
 author: François Best
 branding:
