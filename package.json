@@ -35,7 +35,7 @@
   "dependencies": {
     "@actions/core": "^1.11.1",
     "@actions/exec": "^1.1.1",
-    "clever-tools": "^4.1.0"
+    "clever-tools": "^4.6.1"
   },
   "devDependencies": {
     "@types/node": "^24.6.2",

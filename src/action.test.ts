@@ -81,13 +81,19 @@ test('deploy application with app ID', async () => {
   })
   expectCleverCLICallWithArgs(
     2,
+    'unlink',
+    '--alias',
+    'app_facade42-cafe-babe-cafe-deadf00dbaad'
+  )
+  expectCleverCLICallWithArgs(
+    3,
     'link',
     'app_facade42-cafe-babe-cafe-deadf00dbaad',
     '--alias',
     'app_facade42-cafe-babe-cafe-deadf00dbaad'
   )
   expectCleverCLICallWithArgs(
-    3,
+    4,
     'deploy',
     '--alias',
     'app_facade42-cafe-babe-cafe-deadf00dbaad'
@@ -104,13 +110,19 @@ test('when both app ID and alias are provided, appID takes precedence', async ()
   })
   expectCleverCLICallWithArgs(
     2,
+    'unlink',
+    '--alias',
+    'app_facade42-cafe-babe-cafe-deadf00dbaad'
+  )
+  expectCleverCLICallWithArgs(
+    3,
     'link',
     'app_facade42-cafe-babe-cafe-deadf00dbaad',
     '--alias',
     'app_facade42-cafe-babe-cafe-deadf00dbaad'
   )
   expectCleverCLICallWithArgs(
-    3,
+    4,
     'deploy',
     '--alias',
     'app_facade42-cafe-babe-cafe-deadf00dbaad'
@@ -145,13 +157,19 @@ test('passing extra env variables, using appID', async () => {
   })
   expectCleverCLICallWithArgs(
     2,
+    'unlink',
+    '--alias',
+    'app_facade42-cafe-babe-cafe-deadf00dbaad'
+  )
+  expectCleverCLICallWithArgs(
+    3,
     'link',
     'app_facade42-cafe-babe-cafe-deadf00dbaad',
     '--alias',
     'app_facade42-cafe-babe-cafe-deadf00dbaad'
   )
   expectCleverCLICallWithArgs(
-    3,
+    4,
     'env',
     'set',
     '--alias',
@@ -160,7 +178,7 @@ test('passing extra env variables, using appID', async () => {
     'bar'
   )
   expectCleverCLICallWithArgs(
-    4,
+    5,
     'env',
     'set',
     '--alias',
@@ -169,7 +187,7 @@ test('passing extra env variables, using appID', async () => {
     'spam'
   )
   expectCleverCLICallWithArgs(
-    5,
+    6,
     'deploy',
     '--alias',
     'app_facade42-cafe-babe-cafe-deadf00dbaad'
@@ -223,13 +241,19 @@ test('force deploy application', async () => {
   })
   expectCleverCLICallWithArgs(
     2,
+    'unlink',
+    '--alias',
+    'app_facade42-cafe-babe-cafe-deadf00dbaad'
+  )
+  expectCleverCLICallWithArgs(
+    3,
     'link',
     'app_facade42-cafe-babe-cafe-deadf00dbaad',
     '--alias',
     'app_facade42-cafe-babe-cafe-deadf00dbaad'
   )
   expectCleverCLICallWithArgs(
-    3,
+    4,
     'deploy',
     '--alias',
     'app_facade42-cafe-babe-cafe-deadf00dbaad',
